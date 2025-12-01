@@ -2,7 +2,7 @@
 //*** Array is mutable(changeable)
 //*** We can store multiple data-type in a single array
 
-
+/*
 
 // Array is Object
 const a = [1, 2, 3];
@@ -51,12 +51,6 @@ arr.forEach((item) => {
 })
 
 
-
-
-
-
-
-/*
 
 
 // prob 1: Write a function that returns the sum of all elements in an array

@@ -1,3 +1,5 @@
+/*
+
 function add(a, b) {
   return a + b;
 }
@@ -38,5 +40,77 @@ function f2() {
 function f3() {
   console.log("I'm from f3");
 }
-
 f1();
+
+
+
+
+// Arrow Function
+const funcName = (a, b) => {
+  return a*b;
+}
+console.log(funcName(2, 3));
+
+
+const square = (a) => a*a;
+console.log(square(3));
+
+
+
+
+
+// For each over an array
+const cities = ["Dhaka", "Khulna", "Sylhet"];
+cities.forEach( (val) => {
+  console.log(val);
+})
+
+
+
+
+
+// - Array Method
+
+// Map: --> new Array
+const arr = [1, 2, 3, 4, 5];
+const newArr = arr.map((val) => {
+  return val*val;
+})
+console.log(newArr); // [ 1, 4, 9, 16, 25 ]
+
+
+// Filter: --> new Array
+const arr = [1, 2, 3, 4, 5];
+const newArr = arr.filter((val) => {
+  return val % 2 == 0;
+})
+console.log(newArr); // [ 2, 4 ]
+
+
+// Reduce Method: single output
+const arr = [1, 2, 3, 4, 5];
+const sum = arr.reduce((prev, curr) => {
+  return prev + curr;
+})
+console.log(sum); 
+
+
+//// find max value using reduce function
+const arr = [66, 3, 21, 69, 90, 1]
+const max = arr.reduce((prev, curr) => {
+  return prev < curr ? curr : prev;
+})
+console.log(max);
+
+
+*/
+
+
+// Anonymous function: A function without have any name
+setTimeout(() => {
+  console.log("This msg will be run after 3 seconds.....");
+}, 3000)
+
+
+
+// IIFE
