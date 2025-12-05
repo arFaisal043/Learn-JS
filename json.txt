@@ -1,0 +1,9 @@
+- JSON (JavaScript Object Notation) is a lightweight data-interchange format that is based on the syntax for creating JavaScript objects. 
+It is commonly used for transmitting data between a server and a web application, or between different systems and programming languages.
+
+{
+    "name": "Faisal",
+    "age": 23,
+    "city": "Dhaka
+}
+

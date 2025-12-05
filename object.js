@@ -1,3 +1,5 @@
+// - store multiple data-types
+
 const student = {
     fullName: "Abdur Rahman Faisal",
     age: 22,
@@ -7,4 +9,5 @@ const student = {
     },
 };
 console.log(student);
-console.log(`Marks = ${student.age}`);
+console.log(student.age); // 22
+console.log(student["age"]); // 22
