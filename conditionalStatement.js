@@ -18,8 +18,7 @@ const checkEvenOdd = (x) => {
 
     if(x % 2 == 0) {
         check = "Even";
-    }
-    else {
+    } else {
         check = "Odd";
     }
     return check;

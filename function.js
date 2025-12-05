@@ -107,10 +107,36 @@ console.log(max);
 
 
 // Anonymous function: A function without have any name
-setTimeout(() => {
-  console.log("This msg will be run after 3 seconds.....");
-}, 3000)
+// setTimeout(() => {
+//   console.log("This msg will be run after 3 seconds.....");
+// }, 3000);
 
 
 
-// IIFE
+
+// IIFE: It run exactly once
+// ( () => {
+//   console.log("This is IIFE function")
+// } )()
+
+
+
+
+// Generator functions: generator functions return an iterator (specifically, a Generator object) that can be iterated over using its next() method.
+// function* counter() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+// const cnt = counter();
+// console.log(cnt.next()); // { value: 1, done: false }
+// console.log(cnt.next()); // { value: 2, done: false }
+// console.log(cnt.next()); // { value: 3, done: false }
+// console.log(cnt.next()); // { value: undefined, done: true }
+// console.log(cnt.next().value); // 1
+// console.log(cnt.next().value); // 2
+// console.log(cnt.next().value); // 3
+// console.log(cnt.next().value); // undefined
+
+
+

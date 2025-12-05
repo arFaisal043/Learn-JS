@@ -10,8 +10,7 @@ console.log(`pi = ${pi}`);
 
 if(true) {
     console.log("true");
-}
-else {
+} else {
     console.log("False");
 }
 
