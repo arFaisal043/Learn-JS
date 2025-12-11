@@ -26,3 +26,26 @@ const checkEvenOdd = (x) => {
 
 console.log(checkEvenOdd(4));
 console.log(checkEvenOdd(5));
+
+
+
+// rob 3: find prime number
+
+let checkPrime = (n) => {
+
+    let cnt = 0;
+    for(let i = 2; i < n; i++) {
+        if(n % i == 0) {
+            cnt++;
+        }
+    }
+
+    if(cnt == 0) {
+        console.log("Prime");
+    } 
+    else {
+        console.log("Not prime");
+    }
+}
+
+checkPrime(25);
