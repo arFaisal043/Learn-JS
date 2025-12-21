@@ -59,23 +59,20 @@ x.appendChild(li);
 
 
 
+
 // Form Handling:
-// const form = document.querySelector("#myForm");
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     console.log(event); // return a object(form details) by event parameter
-//     console.log(event.target[0].value); // return input value
-// })
-
-
-// catch form
-const form = document.querySelector('#myForm');
-form.addEventListener('submit', (event) => {
+const form = document.querySelector('#myForm').addEventListener('submit', (event) => {
     event.preventDefault();
     console.log(event); // return a object(form details) by event parameter
     // actual input value
-    console.log(event.target[0].value);
-    console.log(event.target[1].value);
-    console.log(event.target[2].value);
-    console.log(event.target[3].value);
+    console.log(event.target[0].value); // return 1st input value
+    console.log(event.target[1].value); // return 2nd input value
+    console.log(event.target[2].value); // return 3rd input value
+    console.log(event.target[3].value); // return 4th input value
 })
+
+
+
+
+c = document.querySelector('.classList');
+c.classList.add()

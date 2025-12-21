@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bulb {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+</style>
+<body>
+    
+    <div class="bulb"></div>
+    <button id="btn">Switch</button>
+
+<script>
+    c = document.querySelector('.bulb');
+    let click = 0;
+    const btn = document.querySelector('#btn').addEventListener('click', () => {
+        if(click==0) {
+            c.style.backgroundColor="yellow";
+            click = 1;
+            console.log("on")
+        }
+        else {
+            c.style.backgroundColor="black";
+            click = 0;
+            console.log("off")
+        }
+    })
+</script>
+
+
+</body>
+</html>
