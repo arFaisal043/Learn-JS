@@ -42,7 +42,7 @@ Set properties (textContents, className etc.) before adding to DOM
 const button = document.querySelector('#btn');
 button.addEventListener("click", () => {
     const newElm = document.createElement("p");
-    newElm.textContent = "Faisal";
+    newElm.innerText = "Faisal";
 
     // transfer on div -> first select then append
     const innerDiv = document.querySelector("#container");
@@ -53,10 +53,29 @@ button.addEventListener("click", () => {
 // create a li element
 const x = document.querySelector('#myList');
 const li = document.createElement('li');
-li.textContent = "USA";
+li.innerText = "USA";
 x.appendChild(li);
 
 
 
 
-// Form Handling
+// Form Handling:
+// const form = document.querySelector("#myForm");
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     console.log(event); // return a object(form details) by event parameter
+//     console.log(event.target[0].value); // return input value
+// })
+
+
+// catch form
+const form = document.querySelector('#myForm');
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(event); // return a object(form details) by event parameter
+    // actual input value
+    console.log(event.target[0].value);
+    console.log(event.target[1].value);
+    console.log(event.target[2].value);
+    console.log(event.target[3].value);
+})
