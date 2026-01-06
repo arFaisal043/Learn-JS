@@ -134,7 +134,7 @@ function asyncFunc3() {
 console.log("Fetching data 1...");
 asyncFunc1().then((res) => {
     console.log(res); // will come msg of resolve fn
-    
+
     console.log("Fetching data 2...");
     asyncFunc2().catch((err) => {
         console.log(err);
@@ -144,4 +144,4 @@ asyncFunc1().then((res) => {
             console.log(res);
         })
     });
-});
+}); 
