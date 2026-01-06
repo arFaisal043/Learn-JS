@@ -3,6 +3,7 @@
 const calculateSum = (a, b) => a + b;
 console.log(`Sum of a + b = ${calculateSum(2, 3)}`);
 
+
 // 2. Write a function named isEven that takes one argument and returns true if the number is even, and false if it is not.
 
 const isEven = (x) => {
@@ -13,6 +14,7 @@ const isEven = (x) => {
   }
 };
 console.log(isEven(18));
+
 
 // 3. Write a function named findMax that takes an array of numbers and returns the largest number from the array.
 
@@ -39,6 +41,7 @@ const findMax = arr.reduce( (prev, curr) => {
 console.log(findMax);
 */
 
+
 // 4. Write a function named filterOddNumbers that takes an array of numbers and returns a new array containing only the odd numbers.
 
 const arr1 = [2, 1, 150, 8, 12, 3, 2, 7];
@@ -63,6 +66,7 @@ const newArr = arr1.filter((val) => {
 console.log(newArr);
 */
 
+
 // 5. Write a function named countWords that takes a string and returns the number of words in the string.
 
 const str = "JavaScript";
@@ -74,6 +78,7 @@ const countWords = (str) => {
   return cnt;
 };
 console.log(`The number of words = ${countWords(str)}`);
+
 
 // 6. Write a function named removeDuplicates that takes an array and returns a new array with duplicate elements removed.
 

@@ -1,4 +1,3 @@
-const { model } = require("mongoose");
 
 const a = 10;
 const pi = 3.1416;
