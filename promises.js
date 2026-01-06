@@ -96,6 +96,52 @@ asyncFunc1().then((res) => {
     });
 });
 
-
-
 */
+
+
+// promise chain:
+
+// Assume that this is api 1
+function asyncFunc1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Some data 1...");
+            resolve("SUCCESS");
+        }, 2000);
+    });
+}
+
+// Assume that this is api 2
+function asyncFunc2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Some data 2...");
+            reject("error");
+        }, 2000);
+    });
+}
+
+// Assume that this is api 3
+function asyncFunc3() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Some data 3...");
+            resolve("SUCCESS");
+        }, 2000);
+    });
+}
+
+console.log("Fetching data 1...");
+asyncFunc1().then((res) => {
+    console.log(res); // will come msg of resolve fn
+    
+    console.log("Fetching data 2...");
+    asyncFunc2().catch((err) => {
+        console.log(err);
+        
+        console.log("Fetching data 3...");
+        asyncFunc3().then((res) => {
+            console.log(res);
+        })
+    });
+});
