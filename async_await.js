@@ -48,18 +48,3 @@ function api(val) {
 })();
 
 */
-
-function api(val) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(`Weather data ${val} ...`);
-      resolve();
-    }, 2000);
-  });
-}
-
-(async () => {
-  await api(1);
-  await api(2);
-  await api(3);
-})();
