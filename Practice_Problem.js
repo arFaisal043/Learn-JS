@@ -80,7 +80,18 @@ const countWords = (str) => {
 console.log(`The number of words = ${countWords(str)}`);
 
 
-// 6. Write a function named removeDuplicates that takes an array and returns a new array with duplicate elements removed.
+
+// 6. union of two arrays, arr1=[1, 2, 3], arr2=[3, 4, 5]
+
+// using set operation
+// const arr1 = [1, 2, 3];
+// const arr2 = [3, 4, 5];
+
+// const union = [...new Set([...arr1, ...arr2])];
+// console.log(union);
+
+
+// 7. Write a function named removeDuplicates that takes an array and returns a new array with duplicate elements removed.
 
 const arr2 = [1, 2, 1, 3, 4, 5, 3];
 const removeDuplicates = (arr2) => {
@@ -106,9 +117,23 @@ console.log(
 );
 
 /*
-// USing filter method:
-const removeDuplicates = (arr2) => {
-   return arr2.filter((item, index) => arr2.indexOf(item) === index);
-};
-console.log(removeDuplicates(arr2));
+// USing set: O(n)
+const unique = [...new Set(arr)];
+console.log(unique);
 */
+
+
+
+// prob8: find largest string on an array
+// const str = ["c", "javascript", "js", "java", "python"];
+
+// let largeStr = str[0];
+// console.log(largeStr);
+
+// for (let i = 1; i < str.length; i++) {
+//   if (largeStr.length < str[i].length) {
+//     largeStr = str[i];
+//   }
+// }
+
+// console.log(largeStr);
