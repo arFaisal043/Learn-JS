@@ -197,4 +197,67 @@ console.log(numArr); // [ 1, 2, 3, 4, 5 ]
 // console.log(ans);
 
 
+
+
+// prob 11: Sum of keys an object
+
+const obj = {
+    1: "a",
+    2: "b",
+    3: "c"
+}
+const val = Object.keys(obj);
+console.log(val); // [ '1', '2', '3' ]
+
+const num = val.map(Number);
+console.log(num); // [ 1, 2, 3 ]
+
+// sum function
+function sum(a, b, c) {
+    return a + b + c;
+}
+console.log(sum(...num)); // 6
+
+
+
+
+// prob 12: move zero at the end
+const arr = [0, 1, 2, 3, 0, 0, 4]
+
+// sol 1: 
+
+const tempAr = [];
+
+for(let val of arr) {
+    if(val != 0) {
+        tempAr.push(val);
+    }
+}
+console.log(tempAr); // [ 1, 2, 3, 4 ]
+
+for(let i = tempAr.length; i < arr.length; i++) {
+    tempAr.push(0);
+}
+console.log(tempAr); // [ 1, 2, 3, 4, 0, 0, 0]
+
+
+
+// sol 2: without temporary space (array)
+
+let idx = 0; // 0 / 1 / 2 / 3
+
+for(let i = 0; i < arr.length; i++) {
+    if(arr[i] != 0) {
+        arr[idx] = arr[i]; // [1, 2, 3, 4]
+        idx++;
+    }
+}
+
+for(let i = idx; i < arr.length; i++) {
+  // arr.push(0) // -> which keeps adding zeros to the end, creating an infinite loop
+    arr[i] = 0;
+}
+console.log(arr); // [1, 2, 3, 4, 0, 0, 0]
+
+
 */
