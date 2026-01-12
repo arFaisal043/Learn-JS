@@ -1,3 +1,5 @@
+/* 
+
 // 1. Write a function named calculateSum that takes two arguments and returns the sum of the two arguments.
 
 const calculateSum = (a, b) => a + b;
@@ -33,13 +35,13 @@ const findMax = (arr) => {
 };
 console.log(`Max value is = ${findMax(arr)}`);
 
-/*
+
 // Using reduce method:
 const findMax = arr.reduce( (prev, curr) => {
     return prev < curr ? curr : prev;
 })
 console.log(findMax);
-*/
+
 
 
 // 4. Write a function named filterOddNumbers that takes an array of numbers and returns a new array containing only the odd numbers.
@@ -58,13 +60,13 @@ const filterOddNumbers = (arr1) => {
 };
 console.log(`New Array = [${filterOddNumbers(arr1)}]`);
 
-/*
+
 // using filter method
 const newArr = arr1.filter((val) => {
     return val % 2 == 1;
 })
 console.log(newArr);
-*/
+
 
 
 // 5. Write a function named countWords that takes a string and returns the number of words in the string.
@@ -91,8 +93,27 @@ console.log(`The number of words = ${countWords(str)}`);
 // console.log(union);
 
 
-// 7. Write a function named removeDuplicates that takes an array and returns a new array with duplicate elements removed.
 
+// 7. Count all unique elements
+
+// const arr = [1, 2, 1, 3, 1, 2, 4, 3, 4, 2, 1, 5];
+// const obj = {};
+
+// for(let val of arr) {
+//     if(val in obj) {
+//         obj[val]++;
+//     }
+//     else {
+//         obj[val] = 1;
+//     }
+// }
+// console.log(obj); // { '1': 4, '2': 3, '3': 2, '4': 2, '5': 1 }
+
+
+
+// 8. Write a function named removeDuplicates that takes an array and returns a new array with duplicate elements removed.
+
+// SOln 1: O(n^2)
 const arr2 = [1, 2, 1, 3, 4, 5, 3];
 const removeDuplicates = (arr2) => {
   const newArr2 = [];
@@ -116,15 +137,39 @@ console.log(
   `After removing duplicate value, new array = [${removeDuplicates(arr2)}]`
 );
 
-/*
-// USing set: O(n)
+
+// Soln2: USing set: O(n)
 const unique = [...new Set(arr)];
 console.log(unique);
-*/
+
+
+// Soln3: Using Object: O(n)
+const arr = [1, 2, 1, 3, 1, 2, 4, 3, 4, 2, 1, 5];
+const obj = {};
+
+for(let val of arr) {
+    if(val in obj) {
+        obj[val]++;
+    }
+    else {
+        obj[val] = 1;
+    }
+}
+console.log(obj); // { '1': 4, '2': 3, '3': 2, '4': 2, '5': 1 }
+
+// find keys from object
+const output = Object.keys(obj);
+console.log(output); // [ '1', '2', '3', '4', '5' ] 
+
+// we get string, now convert onto an number
+const numArr = output.map(Number);
+console.log(numArr); // [ 1, 2, 3, 4, 5 ]
 
 
 
-// prob8: find largest string on an array
+
+
+// prob9: find largest string on an array
 // const str = ["c", "javascript", "js", "java", "python"];
 
 // let largeStr = str[0];
@@ -140,7 +185,9 @@ console.log(unique);
 
 
 
-// prob 9: find unique elm on an array
+
+
+// prob 10: find unique elm on an array
 // const arr = [1, 2, 1, 2, 3, 4, 3];
 // let ans = 0;
 
@@ -148,3 +195,6 @@ console.log(unique);
 //     ans ^= arr[i];
 // }
 // console.log(ans);
+
+
+*/
