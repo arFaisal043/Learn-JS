@@ -71,25 +71,27 @@ function sum(a, b, c) {
 console.log(sum(...arr)); // 6
 
 
+
+
+___________________________________________________________________________________
+
+
+🔹 2️⃣ Rest Operator (...)
+
+- The rest operator collects multiple elements into a single array.
+
+✅ Use Cases:
+
+// 1. In function parameters:
+
+// If we don't know how many parameter are there
+function sum(...num) {
+    // return a + b + c + ... (not correct way)
+
+    // we can use reduce method
+    return num.reduce((prev, curr) => prev + curr);
+}
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
 */
 
-
-// move zero at the end
-const arr = [0, 1, 2, 3, 0, 0, 4]
-
-// sol 1:
-
-let idx = 0; // 0 / 1 / 2 / 3
-
-for(let i = 0; i < arr.length; i++) {
-    if(arr[i] != 0) {
-        arr[idx] = arr[i]; // [1, 2, 3, 4]
-        idx++;
-    }
-}
-
-for(let i = idx; i < arr.length; i++) {
-  // arr.push(0) // -> which keeps adding zeros to the end, creating an infinite loop
-    arr[i] = 0;
-}
-console.log(arr); // [1, 2, 3, 4, 0, 0, 0]
