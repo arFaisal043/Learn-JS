@@ -19,6 +19,8 @@ const sumArray = (arr) => {
 }
 console.log(`Sum = ${sumArray(arr)}`);
 
+module.exports = {sumArray}
+
 
 
 // 3. Write a JavaScript function named mergeArrays(arr1, arr2) that takes two arrays as arguments and returns a new array. Ex. mergeArrays([1,2],[3,4]) //Output: [1,2,3,4]

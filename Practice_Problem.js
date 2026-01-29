@@ -260,4 +260,12 @@ for(let i = idx; i < arr.length; i++) {
 console.log(arr); // [1, 2, 3, 4, 0, 0, 0]
 
 
+
+
+prob 13: Reverse a string
+
+const str = "javascript";
+console.log(str.split("").reverse().join(""));
+
+
 */
